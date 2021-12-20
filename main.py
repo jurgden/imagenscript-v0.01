@@ -13,23 +13,19 @@ def get_driver():
   options.add_experimental_option('excludeSwitches', ['enable-automation'])
   options.add_argument('disable-blink-features=AutomationControlled')
   driver = webdriver.Chrome(options=options)
-  driver.get('https://automated.pythonanywhere.com/login/')
+  driver.get('https://titan22.com/account/login?return_url=%2Faccount')
   return driver 
 
-def clean_text(text):
-  output = float(text.split(': ')[1])
-  return output
 
 def main():
   driver = get_driver()
-  driver.find_element(by='id', value='id_username').send_keys('automated')
+  driver.find_element(by='xpath', value='/html/body/main/article/section/div/div[1]/form/div[1]/input').send_keys('eopimboaobdo@dropmail.me')
   time.sleep(2)
-  driver.find_element(by='id', value='id_password').send_keys('automatedautomated' + Keys.RETURN)
+  driver.find_element(by='xpath', value='/html/body/main/article/section/div/div[1]/form/div[2]/input').send_keys('xboxlive3' + Keys.RETURN)
   time.sleep(2)
-  driver.find_element(by='xpath', value='/html/body/nav/div/a').click()
+  driver.find_element(by='xpath', value='/html/body/footer/div/section/div/div[1]/div[1]/div[1]/nav/ul/li[1]/a').click()
   print(driver.current_url)
   time.sleep(2)
-  text = driver.find_element(by='xpath', value='/html/body/div[1]/div/h1[2]').text 
-  return clean_text(text)
+  return print(driver.current_url)
 
 print(main())
