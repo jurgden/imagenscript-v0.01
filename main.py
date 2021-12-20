@@ -24,5 +24,8 @@ def main():
   time.sleep(2)
   driver.find_element(by='xpath', value='/html/body/nav/div/a').click()
   print(driver.current_url)
+  time.sleep(2)
+  element = driver.find_element(by='xpath', value='/html/body/div[1]/div/h1[2]')
+  return element.text
 
 print(main())
