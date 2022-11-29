@@ -4,7 +4,7 @@ Welcome!!!!!
 I am so excited.
 Really!
 
-This reply will spin up a stable diffusion 2.0 query script 
+This repl will spin up a stable diffusion 2.0 query script 
 
 I hope my joy while putting this together bleeds into the content and people who end up using and even improving upon this tool.
 
